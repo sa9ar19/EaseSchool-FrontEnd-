@@ -45,12 +45,14 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	font-family: 'kenia';
 }
 
 .login_category:hover{
 	cursor: pointer;
 	font-size: 24px;
 	color: #111110;
+	
 }
 
 .form_container{
@@ -60,3 +62,263 @@
 	height: 100vh;
 	width: 100%;
 }
+
+/* Admin Dashboard Top menu */
+.dashboard-container{
+	position: relative;
+}
+
+.admin-dashboard-top-menu{
+	height: 80px;
+	width: 100%;
+	background-color: #001524;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
+
+.notifications_icon{
+	color: #ffffff;
+}
+
+.notifications_icon:hover, .mail_icon:hover{
+	cursor: pointer;
+	color:red;
+}
+
+.mail_icon{
+	color:#ffffff;
+}
+
+.admin-dashboard-top-menu h1{
+	color: #ffffff;
+	font-size: 24px;
+}
+
+.admin-dashboard-top-menu img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: white;
+	margin-right: 30px;
+}
+
+.admin-dashboard-top-menu img:hover {
+	cursor: pointer	;
+	background-color: red;
+}
+
+
+/* Admin Dashboard Side Bar  */
+.admin-sidebar{
+	height: 100vh;
+	position: fixed;
+}
+
+.sidebar-menu{
+}
+
+.sidebar-hamburger{
+	height: 80px;
+	align-items:center;
+	display: flex;
+	align-items: center;
+}
+
+.total-info-container {
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: row;
+	max-width: 100vw;
+	width: auto;
+	justify-content: space-between;
+}
+
+.total-students, .total-teachers, .total-parents {
+	height: 100px;
+	width: 300px;
+	background-color: #ece4e4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-evenly;
+	margin:0 20px;
+
+}
+
+.icon-container {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: #888181;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	color: #ffffff;
+}
+
+.info h1 {
+	font-size: 25px;
+	font-weight: 600;
+	color: #121010;
+}
+
+.info p {
+	font-size: 24px;
+	color: #2c2929;
+}
+
+/* Admin Dashboard Students Chart  */
+.piechart-container {
+	position: absolute;
+	top: 350px;
+	left: 300px;
+	display: flex;
+	flex-direction: row;
+	max-width: 100vw;
+	width: auto;
+	justify-content: space-between;
+}
+
+.students-chart, .teachers-chart{
+	background-color: #dcdfe1;
+	margin: 0 20px;
+	color: #b3eb09;
+	height: 400px;
+	width: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* All Teachers  */
+.teacher-profile-container{
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	max-width: 75vw;
+	background-color: #e6e5dd;
+	display: flex;
+	justify-content: center;
+	height: auto;
+	flex-wrap: wrap;
+}
+
+.teacher-profile-card{
+	height: 250px;
+	width: 250px;
+	background-color: #cfcbcb;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.teacher-profile-card img {
+	height: 150px;
+	width: 150px;
+}
+
+.teacher-profile-card h1 {
+	font-size: 30px;
+}
+
+.teacher-profile-card:hover{
+	cursor: pointer;
+}
+
+/* Navigation Info  */
+.path-info {
+	height: 50px;
+	position: absolute;
+	top: 100px;
+	left: 300px;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.path-info h1{
+	font-weight: 700;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.path-info-home{
+	color: #001524;
+}
+
+.path-info-rest{
+	color: #eecb07;
+}
+
+/* Add New Teacher Form  */
+.add_teacher_container, .add_student_container{
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	max-width: 75vw;
+	background-color: #e6e5dd;
+	margin-bottom: 40px;
+}
+
+.add_teacher_container h1, .add_student_container h1{
+	font-size: 30px;
+	font-weight: 600;
+	padding: 20px;
+}
+
+.add_teacher_container form, .add_student_container form {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.form-field {
+	margin: 20px;
+	height: 100px;
+	width: 300px;
+}
+
+.form-field label {
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+.form-field input {
+	height: 50px;
+	width: 100%;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+.form-field select {
+	height: 50px;
+	width: 100%;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+.form-field textarea {
+	height: 200px;
+	width: 100%;
+	border-radius: 10px;
+}
+
+.form-field button {
+	height: 50px;
+	width: 150px;
+	border-radius: 10px;
+	background-color: #0e90ed;
+	color: #ffffff;
+	font-size: 24px;
+}
+

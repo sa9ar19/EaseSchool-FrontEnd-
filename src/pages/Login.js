@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaBeer } from 'react-icons/fa';
 import { FaChalkboardUser } from 'react-icons/fa6'
 import { FaUserTie } from 'react-icons/fa6'
 import { FaUserGraduate  } from 'react-icons/fa6'

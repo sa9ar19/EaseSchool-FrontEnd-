@@ -2,7 +2,7 @@ import React from 'react'
 
 export const AdminLoginForm = () => {
   return (
-    <div className="form_container">>
+    <div className="form_container">
       <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
           <form class="space-y-6" action="#">
               <h5 class="text-xl font-medium text-gray-900 dark:text-white">Admin Login</h5>
