@@ -1,7 +1,6 @@
 import React from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom'
-import { PrimarySearchAppBar } from './PrimarySearchAppBar'
 
 import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
@@ -13,11 +12,7 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import ClassIcon from '@mui/icons-material/Class';
 import HailIcon from '@mui/icons-material/Hail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
 import MenuIcon from '@mui/icons-material/Menu';
-
-import adminImage from '../assets/adminprofile.jpg'
 
 export const AdminDashboard = () => {
 
@@ -25,19 +20,10 @@ export const AdminDashboard = () => {
 
 
   return (
-    <div className='dashboard-container'>
-        {/* Top Menu */}
-        <div className='admin-dashboard-top-menu'>
-            <h1>Welcome Admin</h1>
-            <NotificationsIcon fontSize='large' className='notifications_icon'/>
-            <MailOutlineRoundedIcon fontSize='large' className='mail_icon'/>
-            <img src={adminImage} alt="" />
-            
-        </div>
-        {/* <PrimarySearchAppBar /> */}
+    <div className=''>
 
         {/* SideBar  */}
-        <div style={{ display: 'flex', height: '100%', minHeight: '400px' }}>
+        <div style={{ display: 'flex', height: '100%', minHeight: '400px', }}>
             <Sidebar className='admin-sidebar'  collapsed={collapsed}>
                 <Menu className='sidebar-menu' >
                     {/* <div className='sidebar-hamburger' icon={<MenuIcon onClick={() => setCollapsed(!collapsed)}></MenuIcon>}>
@@ -47,8 +33,8 @@ export const AdminDashboard = () => {
                         
                     </div> */}
 
-                    <MenuItem className='sidebar-hamburger' icon={<MenuIcon onClick={() => setCollapsed(!collapsed)}></MenuIcon>}>
-                        <h1>Ease School</h1>
+                    <MenuItem className='sidebar-hamburger flex h-20 items-center' icon={<MenuIcon onClick={() => setCollapsed(!collapsed)}></MenuIcon>}>
+                        Ease School 
                     </MenuItem>
 
                     <MenuItem icon={<GridViewRoundedIcon></GridViewRoundedIcon>} component={<Link to="/dashboard"/>}>

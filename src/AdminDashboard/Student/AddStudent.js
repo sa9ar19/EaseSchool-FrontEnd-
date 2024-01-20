@@ -1,75 +1,112 @@
 import React from 'react'
+import { useState } from 'react'
+import { AdminDashboard } from '../AdminSidebar'
+import { AdminDashHeader } from '../Dashboard/AdminDashHeader'
 
 export const AddStudent = () => {
+
+  const handleSubmit = async () => {
+    console.log("submitted")
+
+    const response = await fetch('http://localhost:8080/addStudent', {
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(form)
+    })
+
+    const data = await response.json()
+
+    console.log(data)
+  }
+
+  const [form, setForm] = useState({});
+
+  const handleChange = (e)=>{
+    setForm({
+      ...form,
+      [e.target.name] : e.target.value
+    })
+    console.log(form)
+  }
+
   return (
+    <div className='flex w-full justify-start gap-2 '>
+        <div className=''>
+          <AdminDashboard/>
+        </div>
     <div>
-      <div className="path-info">
+      <div className='flex flex-col gap-5  w-full'>
+        <AdminDashHeader/>
+      </div>
+      <div className="path-info p-2 h-24 text-xl font-medium">
         <h1>Students</h1>
         <span className='path-info-home'>Home {'>'} </span> <span className='path-info-rest'> Add new Student </span> 
       </div>
 
         <div className="add_student_container">
             <h1>Add new Student</h1>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <div className="form-field">
-                <label htmlFor="student-first-name">
+                <label htmlFor="student_first_name">
                   First Name  <br/>
-                  <input type='text' id='student-first-name' name='student-first-name'></input>
+                  <input onChange={handleChange} type='text' id='student_first_name' name='student_first_name'></input>
                 </label>
               </div>
                 
               <div className="form-field">
-                <label htmlFor="student-last-name">Last Name</label> <br />
-                <input type='text' id='student-last-name' name='student-last-name'></input>
+                <label htmlFor="student_last_name">Last Name</label> <br />
+                <input onChange={handleChange} type='text' id='student_last_name' name='student_last_name'></input>
               </div>
 
               <div className="form-field">
-                <label htmlFor="student-class">Class</label> <br />
-                <input type='number' id='student-class' name='student-class'></input>
+                <label htmlFor="student_class">Class</label> <br />
+                <input onChange={handleChange} type='number' id='student_class' name='student_class'></input>
               </div>
 
               <div className="form-field">
-                <label htmlFor="student-parents-name">Parents Name</label> <br />
-                <input type='text' id='student-parents-name' name='student-parents-name'></input>
+                <label htmlFor="student_parents_name">Parents Name</label> <br />
+                <input onChange={handleChange} type='text' id='student_parents_name' name='student_parents_name'></input>
               </div>
 
               <div className="form-field">
-                <label htmlFor="student-email"> Parents Email</label> <br />
-                <input type="email" id='student-email' name='student-email' />
+                <label htmlFor="student_email"> Parents Email</label> <br />
+                <input onChange={handleChange} type="email" id='student_email' name='student_email' />
               </div>
 
               <div className="form-field">
-                <label htmlFor="student-contact">Contact</label> <br />
-                <input type="number" id='student-contact' name='student-contact' />
+                <label htmlFor="student_contact">Contact</label> <br />
+                <input onChange={handleChange} type="number" id='student_contact' name='student_contact' />
               </div>
 
               <div className="form-field">
-                <label htmlFor="student-address">Address</label> <br />
-                <input type="text" id='student-address' name='student-address' />
+                <label htmlFor="student_address">Address</label> <br />
+                <input  onChange={handleChange} type="text" id='student_address' name='student_address' />
               </div>
 
               <div className="form-field">
-                <label htmlFor="student-dob">Date Of Birth</label> <br />
-                <input type="date" id='student-dob' name='student-dob' />
+                <label htmlFor="student_dob">Date Of Birth</label> <br />
+                <input onChange={handleChange} type="date" id='student_dob' name='student_dob' />
               </div>
 
               <div className="form-field">
-              <label htmlFor="student-gender">Gender</label> <br />
-                <select name="student-gender" id="student-gender">
+              <label htmlFor="student_gender">Gender</label> <br />
+                <select onChange={handleChange} name="student_gender" id="student_gender">
                     <option value="male">male</option>
                     <option value="female">female</option>
                 </select>
               </div>
 
               <div className="form-field">
-                <label htmlFor="student-bio">Short Bio</label> <br />
-                <textarea type="textarea" id='student-bio' name='student-bio' />
+                <label htmlFor="student_bio">Short Bio</label> <br />
+                <textarea className='h-100' onChange={handleChange} type="textarea" id='student_bio' name='student_bio' />
               </div>
 
               <div>
               <div className="form-field">
-                <label htmlFor="student-photo">Upload students Photo</label> <br />
-                <input type="file" id='student-photo' name='student-photo' />
+                <label htmlFor="student_photo">Upload students Photo</label> <br />
+                <input onChange={handleChange} type="file" id='student_photo' name='student_photo' />
               </div>
 
               <div className="form-field">
@@ -79,6 +116,7 @@ export const AddStudent = () => {
 
             </form>
         </div>
+    </div>
     </div>
   )
 }

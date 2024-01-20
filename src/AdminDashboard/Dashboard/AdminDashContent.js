@@ -4,17 +4,26 @@ import { FaUserGroup } from "react-icons/fa6";
 import { FaUserTie } from "react-icons/fa6";
 import StudentsChart from './StudentsChart';
 import TeachersChart from './TeachersChart';
+import { AdminDashboard } from '../AdminSidebar';
+import { AdminDashHeader } from './AdminDashHeader';
 
-export const AdminDashboardContent = () => {
+export const AdminDashContent = () => {
   return (
-    <div>
-      <div className="dashboard-content-container">
-        <div className="path-info">
-          <h1>Admin Dashboard</h1>
+    <div className='flex w-full justify-start gap-2'>
+      <div className=''>
+        <AdminDashboard/>
+      </div>
+
+      <div className="flex flex-col gap-5  w-full">
+        <div>
+          <AdminDashHeader/>
+        </div>
+        <div className="path-info p-2 h-24 text-xl font-medium">
+          <h1 className=''>Admin Dashboard</h1>
           <span className='path-info-home'>Home {'>'} </span> <span className='path-info-rest'> Admin </span> 
         </div>
 
-        <div className="total-info-container">
+        <div className="flex bg-white justify-around">
           <div className="total-students">
             <div className="icon-container">
               <FaUserGraduate /> 

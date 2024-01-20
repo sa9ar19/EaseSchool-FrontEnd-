@@ -72,13 +72,11 @@
 	height: 80px;
 	width: 100%;
 	background-color: #001524;
-	position: absolute;
-	top: 0;
-	left: 0;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	gap: 20px;
+	margin:  0;
 }
 
 .notifications_icon{
@@ -87,7 +85,7 @@
 
 .notifications_icon:hover, .mail_icon:hover{
 	cursor: pointer;
-	color:red;
+	color: #012b49;
 }
 
 .mail_icon{
@@ -119,27 +117,14 @@
 	position: fixed;
 }
 
-.sidebar-menu{
-}
 
-.sidebar-hamburger{
+
+/* .sidebar-hamburger{
 	height: 80px;
 	align-items:center;
 	display: flex;
 	align-items: center;
-}
-
-.total-info-container {
-	position: absolute;
-	top: 200px;
-	left: 300px;
-	background-color: #ffffff;
-	display: flex;
-	flex-direction: row;
-	max-width: 100vw;
-	width: auto;
-	justify-content: space-between;
-}
+} */
 
 .total-students, .total-teachers, .total-parents {
 	height: 100px;
@@ -178,9 +163,6 @@
 
 /* Admin Dashboard Students Chart  */
 .piechart-container {
-	position: absolute;
-	top: 350px;
-	left: 300px;
 	display: flex;
 	flex-direction: row;
 	max-width: 100vw;
@@ -201,13 +183,9 @@
 
 /* All Teachers  */
 .teacher-profile-container{
-	position: absolute;
-	top: 200px;
-	left: 300px;
-	max-width: 75vw;
+	/* position: absolute; */
 	background-color: #e6e5dd;
 	display: flex;
-	justify-content: center;
 	height: auto;
 	flex-wrap: wrap;
 }
@@ -237,14 +215,6 @@
 }
 
 /* Navigation Info  */
-.path-info {
-	height: 50px;
-	position: absolute;
-	top: 100px;
-	left: 300px;
-	font-size: 20px;
-	font-weight: 500;
-}
 
 .path-info h1{
 	font-weight: 700;
@@ -262,11 +232,8 @@
 
 /* Add New Teacher Form  */
 .add_teacher_container, .add_student_container{
-	position: absolute;
-	top: 200px;
-	left: 300px;
-	max-width: 75vw;
 	background-color: #e6e5dd;
+	width: 95%;
 	margin-bottom: 40px;
 }
 
@@ -308,7 +275,7 @@
 }
 
 .form-field textarea {
-	height: 200px;
+	height: 100px;
 	width: 100%;
 	border-radius: 10px;
 }
