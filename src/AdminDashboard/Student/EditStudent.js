@@ -4,12 +4,6 @@ import { AdminDashboard } from '../AdminSidebar'
 
 export const EditStudent = () => {
   return (
-    <div>
-        <div className='flex w-full justify-start gap-2'>
-            <div className=''>
-                <AdminDashboard/>
-            </div>
-
             <div className="flex flex-col gap-5  w-full">
                 <div>
                     <AdminDashHeader/>
@@ -26,7 +20,5 @@ export const EditStudent = () => {
                 </div>
 
             </div>
-        </div>
-    </div>
   )
 }

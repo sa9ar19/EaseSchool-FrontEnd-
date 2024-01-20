@@ -1,15 +1,8 @@
 import React from 'react'
-import { AdminDashboard } from '../AdminSidebar'
 import { AdminDashHeader } from '../Dashboard/AdminDashHeader'
 
 export const AllParents = () => {
   return (
-    <div>
-        <div className='flex w-full justify-start gap-2'>
-            <div className=''>
-                <AdminDashboard/>
-            </div>
-
             <div className="flex flex-col gap-5  w-full">
                 <div>
                     <AdminDashHeader/>
@@ -26,7 +19,6 @@ export const AllParents = () => {
                 </div>
 
             </div>
-        </div>
-    </div>
+
   )
 }

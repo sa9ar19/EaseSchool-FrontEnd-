@@ -1,5 +1,1 @@
-export {Login} from './Login'
-export {AdminLoginForm} from './AdminLoginForm'
-export {TeacherLoginForm} from './TeacherLoginForm'
-export {StudentLoginForm} from './StudentLoginForm'
-export {ParentLoginForm} from './ParentLoginForm'
+export {LoginForm} from './LoginForm'

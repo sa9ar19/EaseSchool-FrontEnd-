@@ -2,14 +2,8 @@ import React from 'react'
 import { AdminDashHeader } from '../Dashboard/AdminDashHeader'
 import { AdminDashboard } from '../AdminSidebar'
 
-export const AddNewBooks = () => {
+export const AddNewBook = () => {
   return (
-    <div>
-        <div className='flex w-full justify-start gap-2'>
-            <div className=''>
-                <AdminDashboard/>
-            </div>
-
             <div className="flex flex-col gap-5  w-full">
                 <div>
                     <AdminDashHeader/>
@@ -26,7 +20,5 @@ export const AddNewBooks = () => {
                 </div>
 
             </div>
-        </div>
-    </div>
   )
 }

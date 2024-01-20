@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import image from "../../assets/adminprofile.jpg";
 
-export const AdminDashHeader = () => {
+export const Navbar = () => {
   const [visible, setVisible] = useState(true);
 
   return (

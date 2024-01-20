@@ -9,11 +9,6 @@ import { AdminDashHeader } from './AdminDashHeader';
 
 export const AdminDashContent = () => {
   return (
-    <div className='flex w-full justify-start gap-2'>
-      <div className=''>
-        <AdminDashboard/>
-      </div>
-
       <div className="flex flex-col gap-5  w-full">
         <div>
           <AdminDashHeader/>
@@ -64,6 +59,5 @@ export const AdminDashContent = () => {
           </div>
         </div>
       </div>
-    </div>
   )
 }

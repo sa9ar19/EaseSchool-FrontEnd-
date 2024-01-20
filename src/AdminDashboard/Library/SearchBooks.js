@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AdminDashHeader } from '../Dashboard/AdminDashHeader'
 import { AdminDashboard } from '../AdminSidebar'
+import axios  from 'axios'
 
 export const SearchBooks = () => {
+
+    const [form, setForm] = useState([])
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+    
+        console.log("submitted")
+
+        console.log(form)
+
+        const formData = new FormData()
+        formData.append('file', form)
+
+        axios.post('http://localhost:8080/profile', formData)
+    
+        console.log(formData)
+      }
   return (
     <div>
         <div className='flex w-full justify-start gap-2'>
@@ -21,7 +39,11 @@ export const SearchBooks = () => {
                 </div>
 
                 <div>
-                    {/* //New Code here */}
+                    
+                <form onSubmit={handleSubmit} encType="multipart/form-data">
+                    <input type="file" name="file" onChange={(e)=> setForm(e.target.files[0])} ></input>
+                    <button type='submit'>submit</button>
+                </form>
 
                 </div>
 
